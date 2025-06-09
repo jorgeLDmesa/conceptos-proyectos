@@ -10,16 +10,6 @@ interface PDFViewProps {
 }
 
 export default function PDFView({ formData, signatureImage }: PDFViewProps) {
-  const formatCurrency = (value: string): string => {
-    const numericValue = Number(value.replace(/[^0-9]/g, ""));
-    return new Intl.NumberFormat("es-CO", {
-      style: "currency",
-      currency: "COP",
-      minimumFractionDigits: 0,
-    })
-      .format(numericValue)
-      .replace("COP", "$");
-  };
 
   const formatDate = (dateString: string): string => {
     if (!dateString) return "";

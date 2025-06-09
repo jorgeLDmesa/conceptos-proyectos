@@ -9,7 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { FileDown, Eye, X } from "lucide-react";
+import { FileDown, Eye } from "lucide-react";
 import PDFView from "./PDFView";
 import { FormData } from "./InvestmentForm";
 

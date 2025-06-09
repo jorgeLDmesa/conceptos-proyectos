@@ -26,7 +26,7 @@ interface FormFieldsProps {
 }
 
 const FormFields: React.FC<FormFieldsProps> = ({ formData, proyectos, onChange }) => {
-  const [projectName, setProjectName] = useState<string | null>(null);
+  const [projectName] = useState<string | null>(null);
 
   // Fetch project name when component mounts or projectId changes
   // useEffect(() => {

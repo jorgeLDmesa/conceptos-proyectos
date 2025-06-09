@@ -1,10 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FileDown } from "lucide-react";
 import { toast } from 'sonner';
 
 // Subcomponentes extraídos
@@ -366,7 +365,6 @@ export default function InvestmentForm({
             proyectos={proyectos}
             formData={formData}
             onChange={handleFormChange}
-            onUpdateProject={updateFormDataFromProyecto}
           />
 
           {/* Campos del formulario (centro de costos, rubro, fondo, etc.) */}

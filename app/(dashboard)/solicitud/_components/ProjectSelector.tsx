@@ -7,14 +7,12 @@ interface ProjectSelectorProps {
   proyectos: Proyecto[];
   formData: FormData;
   onChange: (field: keyof FormData, value: string) => void;
-  onUpdateProject: (proyecto: Proyecto) => void;
 }
 
 export default function ProjectSelector({
   proyectos,
   formData,
   onChange,
-  onUpdateProject,
 }: ProjectSelectorProps) {
   // Genera opciones únicas para proyecto y objeto
   const projectOptions = Array.from(
