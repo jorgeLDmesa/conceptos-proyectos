@@ -2,6 +2,8 @@ import { SidebarTrigger } from "@/components/ui/sidebar"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Plus, Calendar, DollarSign, Hash } from "lucide-react"
+import Link from "next/link"
+
 
 const solicitudes = [
   {
@@ -74,15 +76,17 @@ export default function SolicitudPage() {
         ))}
 
         {/* Card Nueva Solicitud */}
-        <Card className="border-2 border-dashed border-green-200 hover:border-green-300 hover:bg-green-50/50 transition-all cursor-pointer">
-          <CardContent className="flex flex-col items-center justify-center h-full py-8">
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-3">
-              <Plus className="h-6 w-6 text-green-600" />
-            </div>
-            <h3 className="font-medium text-gray-700 mb-1">Nueva Solicitud</h3>
-            <p className="text-sm text-gray-500 text-center">Crear una nueva solicitud de proyecto</p>
-          </CardContent>
-        </Card>
+        <Link href="/solicitud/nueva">
+          <Card className="border-2 border-dashed border-green-200 hover:border-green-300 hover:bg-green-50/50 transition-all cursor-pointer">
+            <CardContent className="flex flex-col items-center justify-center h-full py-8">
+              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-3">
+                <Plus className="h-6 w-6 text-green-600" />
+              </div>
+              <h3 className="font-medium text-gray-700 mb-1">Nueva Solicitud</h3>
+              <p className="text-sm text-gray-500 text-center">Crear una nueva solicitud de proyecto</p>
+            </CardContent>
+          </Card>
+        </Link>
       </div>
     </div>
   )
