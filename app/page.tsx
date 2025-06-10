@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function LoginPage() {
   return (
@@ -22,42 +23,11 @@ export default function LoginPage() {
           <p className="text-lg text-gray-600">Politécnico Jaime Isaza Cadavid</p>
         </div>
 
-        <Card className="shadow-lg border-0 bg-white/80 backdrop-blur-sm">
-          <CardHeader className="text-center">
-            <CardTitle className="text-2xl text-gray-800">Iniciar Sesión</CardTitle>
-            <CardDescription className="text-gray-600">Accede al sistema de gestión de proyectos</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="email" className="text-gray-700">
-                Correo Electrónico
-              </Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="usuario@elpoli.edu.co"
-                className="border-gray-200 focus:border-green-400 focus:ring-green-400"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="password" className="text-gray-700">
-                Contraseña
-              </Label>
-              <Input
-                id="password"
-                type="password"
-                placeholder="••••••••"
-                className="border-gray-200 focus:border-green-400 focus:ring-green-400"
-              />
-            </div>
-            <Button
-              className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-medium py-2.5"
-              size="lg"
-            >
-              Ingresar al Sistema
-            </Button>
-          </CardContent>
-        </Card>
+        <Button>
+          <Link href="/login">
+            Iniciar Sesión
+          </Link>
+        </Button>
 
         <div className="text-center mt-6 text-sm text-gray-500">
           <p>© 2024 Politécnico Jaime Isaza Cadavid</p>
